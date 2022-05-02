@@ -1,0 +1,83 @@
+:root
+{
+  --main-color: #242234;
+  --main-color-dark: #332B26;
+  --accent-color: #4D4680;
+  --secondary-color-dark: #1E331C;
+  --secondary-color-light: #51804D;
+}
+
+body
+{
+  background-color: var(--main-color);
+}
+
+p
+{
+  color: white;
+  margin: 10px;
+}
+
+input[type=text]
+{
+  border: 0;
+  border-bottom: 2px solid var(--accent-color);
+  background-color: var(--main-color-dark);
+  color: white;
+}
+
+input[type=text]:focus
+{
+  outline: none;
+}
+
+/* FORM */
+
+#graph-container 
+{
+  width: 100%;
+  height: 90vh;
+  display: block;
+  position: relative;
+  border: 1px solid var(--accent-color);
+}
+
+#app-container 
+{
+  width: 100%;
+  height: 100%;
+}
+
+
+.row
+{
+  margin-top: 1rem;
+}
+
+/* FORM */
+#form-add-node
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+#input-node-color
+{
+  border: 0;
+  background-color: var(--accent-color);
+  width: 25%;
+  margin: 10px;
+}
+
+#button-new-node
+{
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  border: 0;
+  color: white;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px 1rem 5px 1rem;
+}
