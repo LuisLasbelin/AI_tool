@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta -->
     <meta charset="UTF-8">
@@ -7,33 +8,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <!-- Scripts -->
     <script src="node_modules/cytoscape/dist/cytoscape.min.js"></script>
-    <script src="src/graph.js" type="module"></script>
+    <script type="module" src="src/graph.js"></script>
 </head>
+
 <body>
     <div id="app-container" class="container">
         <div class="row">
             <div class="col-3">
                 <!-- ADD NODE CONTAINER -->
                 <div class="container" id="form-add-node">
-                    
+
                     <div class="row">
                         <p>Node name</p>
                         <input type="text" name="node-id" id="input-node-id">
                     </div>
                     <div class="row">
-                        <p><abbr title="Use ; (semicolon) to divide the node names and
-                        write the node name exactly.">Node connections</abbr></p>
-                        <input type="text" name="node-id" id="input-node-connections">
+                        <p>Connection name</abbr></p>
+                        <input type="text" name="node-id" id="input-connection-name">
                     </div>
                     <div class="row">
-                        <input type="color" name="node-color" id="input-node-color">
+                        <input type="color" name="node-color" id="input-node-color" value="#9A2D82">
                     </div>
                 </div>
-                <button type="submit" id="button-new-node">Add node</button>
+                <div class="container" id="buttons-node-container">
+                    <p>Node</p>
+                    <div class="row">
+                        <button type="submit" id="button-new-node">Add node</button>
+                    </div>
+                    <div class="row">
+                        <button type="submit" id="button-delete-node">Delete node</button>
+                    </div>
+                    <div class="row">
+                        <button type="submit" id="button-add-connection">Create connections</button>
+                    </div>
+                </div>
+                <div class="container" id="buttons-graph-container">
+                    <p>Graph</p>
+                    <div class="row">
+                        <button type="submit" id="button-save-graph">Download graph</button>
+                    </div>
+                </div>
             </div>
             <!-- GRAPH CONTAINER -->
             <div class="col-9">
@@ -42,4 +61,5 @@
         </div>
     </div>
 </body>
+
 </html>
